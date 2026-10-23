@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Fő Eszköz: Légvédelmi Gépágyú Számítógép</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fejléc és Navigáció -->
+    <header>
+        <div class="logo-container">
+            <span class="system-status">[ PRIMARY DEVICE ANALYSIS ]</span>
+            <h1>LÉGVÉDELMI GÉPÁGYÚ TŰZVEZETŐ SZÁMÍTÓGÉP</h1>
+            <p class="subtitle">Hardveres Architektúra és Kritikus Rendszerek Elemzése</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="eszkoz.html" class="active">A Fő Eszköz</a></li>
+                <li><a href="osszehasonlitas.html">Referencia & Összehasonlítás</a></li>
+                <li><a href="fogalomtar.html">Fogalomtár</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Globális Terminál Státuszsor -->
+    <div style="background-color: #0b1410; border: 1px dashed var(--accent-color); padding: 8px 12px; margin-bottom: 20px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-color); display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+        <span>STATUS: SECURE_LINK // SYSTEM: ONLINE</span>
+        <span>ARCH: MULTI-PAGE SECURE-HTML</span>
+        <span>TARGET: C-RAM_FIRE_CONTROL</span>
+    </div>
+
+    <!-- Fő tartalom -->
+    <main>
+        <!-- Bevezető szakasz szövegkörbefuttatott képpel -->
+        <section class="intro-section clearfix">
+            <h2>A Tűzvezető Rendszer Hardveres Felépítése</h2>
+            
+            <div class="floated-image-container">
+                <img src="img/C-ram.jpg" alt="C-RAM tűzvezető gépágyú" style="width: 100%; height: auto;">
+                <span class="caption">1. ábra: C-RAM tűzvezető rendszer [1]</span>
+            </div>
+
+            <p>
+                A szárazföldi légvédelmi egységek vezérlőegységei a radarok és optikai szenzorok által továbbított pozícióadatokból valós időben számítják ki a közeledő célpontok (pl. tüzérségi lövedékek, drónok) ballisztikai röppályáját. A számítások alapján a rendszer az elektromos szervóhajtásokon keresztül milliradian pontossággal pozicionálja a gépágyút.
+            </p>
+            <p>
+                Ezeknél a berendezéseknél nem az átlagos számítási sebesség, hanem a garantált időkorlátokon belüli feladatvégrehajtás és az üzembiztonság a meghatározó követelmény. A hardvernek intenzív vibráció, szélsőséges hőmérsékleti ingadozások, valamint zavaró elektromágneses terek mellett is folyamatosan működőképesnek kell maradnia.
+            </p>
+        </section>
+
+        <!-- 1. Fejezet: Lockstep Processing -->
+        <section class="intro-section">
+            <h2>1. Redundáns Processzorarchitektúra és Lockstep Működés</h2>
+            <p>
+                Katonai és ipari környezetben a félvezetőket ionizáló sugárzás és feszültségtüskék érhetik, amelyek egyetlen tranzisztor feltöltődésével nemkívánatos bit-flip (Single-Event Upset) hibát idézhetnek elő a regiszterekben vagy a buszokon. Civil rendszereknél ez szoftveres összeomláshoz vagy fagyáshoz vezet.
+            </p>
+            <p>
+                A tűzvezető architektúra ezt <strong>Lockstep redundanciával</strong> küszöböli ki: két vagy több azonos órajelű processzormag szigorú szinkronban, párhuzamosan hajtja végre ugyanazokat az utasításokat. Egy célirányos hardveres komparátor egység folyamatosan összehasonlítja a magok kimeneteit. Eltérés esetén a rendszer logikája azonnal észleli a hibát és átvált a tartalék csatornára anélkül, hogy a célkövetés megszakadna.
+            </p>
+        </section>
+
+        <!-- 2. Fejezet: RTOS -->
+        <section class="intro-section">
+            <h2>2. Valós Idejű Operációs Rendszerek (RTOS)</h2>
+            <p>
+                A hagyományos asztali operációs rendszerek (például a Windows vagy az általános Linux disztribúciók) megszakításkezelése és taszk-ütemezése nem determinisztikus: a háttérfolyamatok és a memóriakezelési rutinok ingadozó válaszidőt (jittert) okozhatnak.
+            </p>
+            <p>
+                A tűzvezető számítógép specifikus **Valós Idejű Operációs Rendszert (RTOS)** futtat, ahol a taszkok prioritása és az ütemezés szigorúan rögzített (hard real-time). Ez biztosítja, hogy a célpozíciók frissítése és a tüzelési parancs kiküldése minden esetben a kiszámított milliszekundumos időablakon belül megtörténjen.
+            </p>
+        </section>
+
+        <!-- 3. Fejezet: Fizikai védelem -->
+        <section class="intro-section">
+            <h2>3. Fizikai Ellenállóság, Hűtés és EMP Védelem</h2>
+            <p>
+                A felépítményből adódóan a hardvert a tüzelés során fellépő mechanikai lökéshullámok és rázkódások terhelik. Az aktív, ventilátoros hűtés alkalmazása a por, a pára és a torkolattűz gázai miatt nem lehetséges. Ezért a ház tömör, hővezető alumíniumötvözetből készül, amely passzív úton, a gépház felületén keresztül adja át a hőt a környezetnek.
+            </p>
+            <p>
+                Az áramköröket emellett túlfeszültség-védelmi modulokkal és optikai leválasztókkal szerelik fel, a fémhordozó pedig Faraday-kalitkaként védi az integrált áramköröket a külső <strong>EMP (elektromágneses impulzus)</strong> hatásokkal szemben.
+            </p>
+        </section>
+    </main>
+
+    <!-- Lábjegyzet és Források -->
+    <footer>
+        <div class="footer-content" style="margin-bottom: 20px;">
+            <p>Miskolci Egyetem — Programtervező Informatikus BSc | Számítógép Architektúrák Beadandó</p>
+        </div>
+        <div class="sources-section" style="border-top: 1px dashed var(--border-color); padding-top: 15px; text-align: left; max-width: 800px; margin: 0 auto; font-size: 0.8rem;">
+            <p style="font-family: var(--font-mono); color: var(--accent-color); margin-bottom: 8px;">[ FORRÁSOK / REFERENCES ]</p>
+            <ul style="list-style-type: none; padding-left: 0; color: #8b9bb4;">
+                <!-- Képek forrásai -->
+                <li style="margin-bottom: 5px;">
+                    [1] <a href="https://commons.wikimedia.org/wiki/File:161013-A-UE529-001_-_C-RAM_Fire.jpg" target="_blank" style="color: var(--text-color); text-decoration: underline;">Ben Santos: 161013-A-UE529-001 - C-RAM Fire (Wikimedia Commons)</a>
+                </li>
+                <li style="margin-bottom: 5px;">
+                    [2] <a href="https://pixabay.com/hu/illustrations/pc-számítógép-cpu-technológia-684125/" target="_blank" style="color: var(--text-color); text-decoration: underline;">lrcfree-812646: pc-számítógép-cpu-technológia / Pixabay</a>
+                </li>
+                <li style="margin-bottom: 5px;">
+                    [3] <a href="https://commons.wikimedia.org/wiki/File:Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png" target="_blank" style="color: var(--text-color); text-decoration: underline;">Nikitarama: Avalanche Hardline Liquid Cooled Gaming PC (Wikimedia Commons)</a>
+                </li>
+                <li style="margin-bottom: 5px;">
+                    [4] <a href="https://www.unmannedsystemstechnology.com/2019/05/uavos-introduces-new-portable-uav-ground-control-station/" target="_blank" style="color: var(--text-color); text-decoration: underline;">UAVOS Inc.: UAVOS Introduces New Portable UAV Ground Control Station</a>
+                </li>
+                
+                <!-- Új: Szakmai elméleti / irodalmi források a hardverhez -->
+                <li style="margin-bottom: 5px; margin-top: 10px;">
+                    [5] Tanenbaum, Andrew S. – Austin, Todd: <em>Structured Computer Organization</em> (Számítógép-architektúrák, Pearson Education / Egyetemi tankönyv alapok).
+                </li>
+                <li style="margin-bottom: 5px;">
+                    [6] NASA Office of Safety and Mission Assurance: <em>Fault-Tolerant Microprocessor / Lockstep Architecture Guidelines</em> (Szakmai fehérkönyv a redundáns magokról és ECC memóriáról).
+                </li>
+                <li style="margin-bottom: 5px;">
+                    [7] Real-Time Operating Systems (RTOS) Concepts – Deterministic Scheduling & Hard Real-Time Systems Documentation.
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

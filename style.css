@@ -1,0 +1,329 @@
+/* --- Alapbeállítások és Változók --- */
+:root {
+    --bg-color: #0d1110;       /* Nagyon sötét grafitszürke/zöldes háttér */
+    --card-bg: #161f1b;        /* Kártyák háttere */
+    --text-color: #c9d1c8;     /* Kellemes törtfehér szöveg */
+    --accent-color: #00ff66;   /* Taktikai neonzöld */
+    --accent-glow: rgba(0, 255, 102, 0.25); /* Zöld derengés */
+    --shadow-color: rgba(0, 255, 102, 0.12); /* Finomabb zöld árnyék */
+    --border-color: #23352c;   /* Finom szegélyszín */
+    --font-mono: 'Courier New', Courier, monospace;
+    --featured-gradient-start: rgba(22, 31, 27, 0.9); /* Piramis csúcs gradient kezdőszín */
+    --featured-gradient-end: rgba(13, 22, 17, 0.9);    /* Piramis csúcs gradient végszín */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Fejléc és Navigáció --- */
+header {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logo-container .system-status {
+    font-family: var(--font-mono);
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+header h1 {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+header .subtitle {
+    color: #8b9bb4;
+    font-size: 0.95rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* --- Tartalom & Szekciók --- */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section h2 {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 10px;
+}
+
+.intro-section p {
+    margin-bottom: 15px;
+    color: #b0bfc0;
+}
+
+/* --- Kártya Rács (Card Grid) --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.card h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #9aa8a4;
+    margin-bottom: 20px;
+}
+
+/* --- Gombok --- */
+.btn {
+    font-family: var(--font-mono);
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    text-shadow: 0 0 5px var(--accent-glow);
+}
+
+/* --- Lábjegyzet ---  */
+footer {
+    margin-top: 60px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6b7c76;
+    font-family: var(--font-mono);
+}
+
+/* --- Piramis Struktúra & Kiemelt Kártya --- */
+.hierarchy-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* A kiemelt fő eszköz kártyája (Piramos csúcsa) */
+.hierarchy-section .featured-card {
+    box-shadow: 0 0 15px var(--shadow-color);
+    background: linear-gradient(135deg, var(--featured-gradient-start), var(--featured-gradient-end));
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.card-content-wrapper {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-text {
+    flex: 1 1 300px;
+}
+
+.card-text h3 {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin: 8px 0;
+}
+
+/* Alsó referencia kártyák rácsa (Piramis alapja) */
+.reference-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* --- Kép Helykitöltők (Placeholders) --- */
+.card-img-placeholder {
+    background-color: #090e0b;
+    border: 1px dashed var(--accent-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    padding: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Kiemelt kártya nagyobb képe */
+.card-content-wrapper .card-img-placeholder {
+    flex: 0 1 320px;
+    min-height: 160px;
+    width: 100%;
+}
+
+/* Kisebb kártyák képei */
+.card-img-placeholder.small {
+    min-height: 120px;
+    margin-bottom: 15px;
+}
+/* Képek stílusa: ha <img> tagek kerülnek a .card-img-placeholder elembe, ezekre érvényesül. 
+   Ha jelenleg nem használsz <img> tageket, ezt a szekciót későbbre is hagyhatod. */
+.card-img-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+/* --- Szövegkörbefuttatott kép (Book style) --- */
+.floated-image-container {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    max-width: 320px;
+    border: 1px solid var(--accent-color);
+    padding: 6px;
+    background-color: var(--card-bg);
+    border-radius: 4px;
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.floated-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
+
+.floated-image-container .caption {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    margin-top: 6px;
+    text-align: center;
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* --- Reszponzív Beállítások (Mobil & Tablet optimalizálás) --- */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Fejléc és navigáció igazítása mobilon */
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+    }
+
+    /* A fő eszköz kártya belső elrendezése egymás alá kerül mobilon */
+    .card-content-wrapper {
+        flex-direction: column;
+    }
+
+    .card-content-wrapper .card-img-placeholder {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    /* A szövegkörbefuttatott kép mobilon ugorjon felülre, középre */
+    .floated-image-container {
+        float: none;
+        max-width: 100%;
+        margin: 0 0 15px 0;
+    }
+}

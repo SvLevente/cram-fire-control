@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számítógép Architektúrák: Légvédelmi Gépágyú Számítógép</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fejléc és Navigáció -->
+    <header>
+        <div class="logo-container">
+            <span class="system-status">[ PRIMARY DEVICE: AA-GUN FIRE CONTROL COMPUTER ]</span>
+            <h1>LÉGVÉDELMI GÉPÁGYÚ SZÁMÍTÓGÉP-ARCHITEKTÚRA</h1>
+            <p class="subtitle">Extrém Környezet és Valós Idejű Rendszerek Hardveres Elemzése</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Főoldal</a></li>
+                <li><a href="eszkoz.html">A Fő Eszköz</a></li>
+                <li><a href="osszehasonlitas.html">Referencia & Összehasonlítás</a></li>
+                <li><a href="fogalomtar.html">Fogalomtár</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Globális Terminál Státuszsor -->
+    <div style="background-color: #0b1410; border: 1px dashed var(--accent-color); padding: 8px 12px; margin-bottom: 20px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-color); display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+        <span>STATUS: SECURE_LINK // SYSTEM: ONLINE</span>
+        <span>ARCH: MULTI-PAGE SECURE-HTML</span>
+        <span>TARGET: C-RAM_FIRE_CONTROL</span>
+    </div>
+
+    <!-- Fő tartalom -->
+    <main>
+        <!-- Bevezető szekció -->
+        <section class="intro-section">
+            <h2>A Projekt Fő Témája: Harctéri Számítógép-Architektúra</h2>
+            <p>
+                A beadandó célja egy speciális számítógépes architektúra — <strong>a szárazföldi légvédelmi gépágyúk (pl. C-RAM vagy Gepard rendszerek) tűzvezető számítógépének</strong> — hardveres felépítésének, hibatűrésének és működési elveinek vizsgálata.
+            </p>
+            <p>
+                A témaválasztás indoka, hogy a harctéri környezetben használt célkövető hardverek tervezésekor a maximális nyers teljesítmény helyett a determinisztikus válaszidő, a fizikai strapabírás és a magas fokú redundancia a legfőbb tervezési szempont. Az oldalon található hiearchikus elrendezés és az összehasonlító elemzés bemutatja a kritikus katonai rendszerek és a civil hardverek közötti alapvető architektúrabeli eltéréseket.
+            </p>
+        </section>
+
+        <!-- Piramis Struktúra: Fő Eszköz felül -->
+        <section class="hierarchy-section">
+            <h2>Rendszerarchitektúra Áttekintés</h2>
+            
+            <!-- FŐ ESZKÖZ (Kiemelt, teljes szélességű kártya) -->
+            <div class="card featured-card">
+                <div class="card-content-wrapper">
+                    <div class="card-text">
+                        <div class="card-tag">[ FŐ ESZKÖZ - PRIMARY ]</div>
+                        <h3>Légvédelmi Gépágyú Tűzvezető Számítógép</h3>
+                        <p>Valós idejű operációs rendszer (RTOS), redundáns lockstep magok, ECC hibajavító memória, valamint EMP- és fizikai rázkódásállóság a miliszekundumos pontosságú célkövetésért.</p>
+                        <a href="eszkoz.html" class="btn">Részletes elemzés megnyitása &raquo;</a>
+                    </div>
+                    <div class="card-img-placeholder">
+                        <img src="img/C-ram.jpg" alt="Légvédelmi gépágyú tűzvezető számítógép" style="max-width:100%; height:auto;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- REFERENCIA ESZKÖZÖK (3-as oszlop alul) -->
+            <div class="reference-grid">
+                
+                <!-- 1. Irodai PC -->
+                <div class="card">
+                    <div class="card-img-placeholder small">
+                        <img src="img/Standardpc.jpg" alt="Irodai PC" style="max-width:100%; height:auto;">
+                    </div>
+                    <div class="card-tag">Civil Referencia</div>
+                    <h3>Irodai PC</h3>
+                    <p>Költséghatékony x86 hardver alapfeladatokra, mint belépési szintű viszonyítási alap.</p>
+                    <a href="osszehasonlitas.html#civil" class="btn">Összehasonlítás &raquo;</a>
+                </div>
+
+                <!-- 2. Gamer PC -->
+                <div class="card">
+                    <div class="card-img-placeholder small">
+                        <img src="img/Gamingpc.png" alt="High-End Gamer PC" style="max-width:60%; height:auto;">
+                    </div>
+                    <div class="card-tag">Civil Referencia</div>
+                    <h3>High-End Gamer PC</h3>
+                    <p>Nyers grafikai teljesítmény és vízhűtés, ami zord harctéri körülmények között azonnal felmondná a szolgálatot.</p>
+                    <a href="osszehasonlitas.html#gamer" class="btn">Összehasonlítás &raquo;</a>
+                </div>
+
+                <!-- 3. Drónvezérlő -->
+                <div class="card">
+                    <div class="card-img-placeholder small">
+                        <img src="img/dronelaptop.jpg" alt="Taktikai Drónvezérlő" style="max-width:80%; height:auto;">
+                    </div>
+                    <div class="card-tag">Katonai Referencia</div>
+                    <h3>Taktikai Drónvezérlő</h3>
+                    <p>Hordozható, strapabíró (Rugged) egység passzív hűtéssel és titkosítással.</p>
+                    <a href="osszehasonlitas.html#dron" class="btn">Összehasonlítás &raquo;</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Lábjegyzet és Források -->
+    <footer>
+        <div class="footer-content" style="margin-bottom: 20px;">
+            <p>Miskolci Egyetem — Programtervező Informatikus BSc | Számítógép Architektúrák Beadandó</p>
+        </div>
+        
+        <!-- Kötelező Források Szekció -->
+        <div class="sources-section" style="border-top: 1px dashed var(--border-color); padding-top: 15px; text-align: left; max-width: 800px; margin: 0 auto; font-size: 0.8rem;">
+            <p style="font-family: var(--font-mono); color: var(--accent-color); margin-bottom: 8px;">[ FORRÁSOK / REFERENCES ]</p>
+            <ul style="list-style-type: none; padding-left: 0; color: #8b9bb4;">
+                <li style="margin-bottom: 5px;">
+                    [1] <a href="https://commons.wikimedia.org/wiki/File:161013-A-UE529-001_-_C-RAM_Fire.jpg" target="_blank" style="color: var(--text-color); text-decoration: underline;">Ben Santos: 161013-A-UE529-001 - C-RAM Fire</a>
+                </li>
+                <li style="margin-bottom: 5px;">
+                    [2] <a href="https://pixabay.com/hu/illustrations/pc-számítógép-cpu-technológia-684125/" target="_blank" style="color: var(--text-color); text-decoration: underline;">lrcfree-812646: pc-számítógép-cpu-technológia-684125 /Pixabay</a>
+                </li>
+                <li style="margin-bottom: 5px;">
+                    [3] <a href="https://commons.wikimedia.org/wiki/File:Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png" target="_blank" style="color: var(--text-color); text-decoration: underline;">Nikitarama: Avalanche Hardline Liquid Cooled Gaming PC</a>
+                </li>
+                <li style="margin-bottom: 5px;">
+                    [4] <a href="https://www.unmannedsystemstechnology.com/2019/05/uavos-introduces-new-portable-uav-ground-control-station/" target="_blank" style="color: var(--text-color); text-decoration: underline;">UAVOS: New Portable UAV Ground Control Station</a>
+                </li>    
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+<!-- Filmbe illő Gépelős Terminális Boot Animáció -->
+    <div id="terminal-boot" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #050a08; color: var(--accent-color); font-family: var(--font-mono); z-index: 9999; display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 20px;">
+        <div id="terminal-text" style="font-size: 1.1rem; line-height: 1.8; white-space: pre-line; max-width: 800px; width: 100%;"></div>
+    </div>
+
+    <style>
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .cursor {
+            display: inline-block;
+            background-color: var(--accent-color);
+            width: 9px;
+            height: 18px;
+            vertical-align: middle;
+            animation: blink 0.8s infinite;
+        }
+    </style>
+
+    <script>
+        // Ellenőrizzük az oldal betöltési típusát (újratöltés / F5 volt-e)
+        const perfEntries = performance.getEntriesByType("navigation");
+        const isReload = perfEntries.length > 0 && perfEntries[0].type === "reload";
+
+        // Ha F5/újratöltés történt, töröljük a beállítást, hogy újra lefusson
+        if (isReload) {
+            sessionStorage.removeItem("bootAnimPlayed");
+        }
+
+        // Ellenőrizzük, hogy ebben a folyamatos böngészésben lefutott-e már
+        if (sessionStorage.getItem("bootAnimPlayed")) {
+            // Sima aloldal-navigáció: elrejtjük a terminált azonnal
+            document.addEventListener("DOMContentLoaded", () => {
+                const bootScreen = document.getElementById("terminal-boot");
+                if (bootScreen) {
+                    bootScreen.style.display = "none";
+                }
+            });
+        } else {
+            // Első belépés VAGY Frissítés (F5): lejátsszuk a pörgős animációt
+            const lines = [
+                "> INITIALIZING SECURE HARDWARE KERNEL...",
+                "> LOADING LOCKSTEP REDUNDANCY MODULES... [OK]",
+                "> MOUNTING RTOS & ECC MEMORY DRIVERS... [OK]",
+                "> ESTABLISHING ENCRYPTED TACTICAL LINK...",
+                "> ACCESS GRANTED. WELCOME, OPERATOR."
+            ];
+
+            let lineIndex = 0;
+            let charIndex = 0;
+
+            function typeWriter() {
+                const textContainer = document.getElementById("terminal-text");
+                const bootScreen = document.getElementById("terminal-boot");
+
+                if (lineIndex < lines.length) {
+                    let currentLine = lines.slice(0, lineIndex).join("\n") + "\n";
+                    currentLine += lines[lineIndex].substring(0, charIndex);
+                    textContainer.innerHTML = currentLine + '<span class="cursor"></span>';
+                    
+                    charIndex++;
+                    if (charIndex > lines[lineIndex].length) {
+                        lineIndex++;
+                        charIndex = 0;
+                        setTimeout(typeWriter, 90);
+                    } else {
+                        setTimeout(typeWriter, 12);
+                    }
+                } else {
+                    // Elmentjük, hogy navigáláskor már ne fusson le
+                    sessionStorage.setItem("bootAnimPlayed", "true");
+
+                    setTimeout(() => {
+                        bootScreen.style.transition = "opacity 0.4s ease, visibility 0.4s ease";
+                        bootScreen.style.opacity = "0";
+                        bootScreen.style.visibility = "hidden";
+                    }, 300);
+                }
+            }
+
+            window.addEventListener("DOMContentLoaded", () => {
+                setTimeout(typeWriter, 100);
+            });
+        }
+    </script>
+</html>

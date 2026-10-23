@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fogalomtár — Számítógép Architektúrák</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fejléc és Navigáció -->
+    <header>
+        <div class="logo-container">
+            <span class="system-status">[ TERMINOLOGY & GLOSSARY ]</span>
+            <h1>ARCHITEKTÚRÁI ÉS KATONAI FOGALOMTÁR</h1>
+            <p class="subtitle">A projektben használt szakmai kifejezések, szabványok és rövidítések jegyzéke</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="eszkoz.html">A Fő Eszköz</a></li>
+                <li><a href="osszehasonlitas.html">Referencia & Összehasonlítás</a></li>
+                <li><a href="fogalomtar.html" class="active">Fogalomtár</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Globális Terminál Státuszsor -->
+    <div style="background-color: #0b1410; border: 1px dashed var(--accent-color); padding: 8px 12px; margin-bottom: 20px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-color); display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+        <span>STATUS: SECURE_LINK // SYSTEM: ONLINE</span>
+        <span>ARCH: MULTI-PAGE SECURE-HTML</span>
+        <span>TARGET: C-RAM_FIRE_CONTROL</span>
+    </div>
+
+    <main>
+        <section class="intro-section">
+            <h2>Kritikus Hardveres és Rendszertechnikai Fogalmak</h2>
+            <p>
+                Az alábbi gyűjtemény a légvédelmi tűzvezető számítógépek és a kritikus rendszerek architektúrájában előforduló legfontosabb műszaki kifejezéseket, rövidítéseket és működési elveket foglalja össze.
+            </p>
+        </section>
+
+        <section class="glossary-section">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                
+                <div class="card">
+                    <div class="card-tag">[ ARCHITEKTÚRA / REDUNDANCIA ]</div>
+                    <h3>Lockstep Működés (Lockstep Processing)</h3>
+                    <p>
+                        <strong>Mit jelent?</strong> Két vagy több azonos processzormag szigorúan szinkronban, ugyanazt a kódjegyet hajtja végre órajelet órajelre követve.<br>
+                        <strong>Miért kell?</strong> Egy hardveres összehasonlító egység folyamatosan ellenőrzi a magok kimenetét. Ha elektromágneses zavar vagy bit-flip miatt az egyik mag hibás eredményt ad, a rendszer azonnal felismeri az eltérést anélkül, hogy a számítási folyamat megszakadna.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-tag">[ OPERÁCIÓS RENDSZER ]</div>
+                    <h3>RTOS (Real-Time Operating System — Valós Idejű Operációs Rendszer)</h3>
+                    <p>
+                        <strong>Mit jelent?</strong> Olyan operációs rendszer, amely garantálja, hogy egy adott feladat lefutása egy szigorúan meghatározott időkorláton (hard deadline) belül megtörténik.<br>
+                        <strong>Különbség a civil OS-hez képest:</strong> A Windows vagy a Linux a teljesítmény átlagos maximálására törekszik, így egy háttérfolyamat bármikor késleltetheti a válaszidőt. Az RTOS ezzel szemben kiszámítható (determinisztikus).
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-tag">[ MEMÓRIA ]</div>
+                    <h3>ECC RAM (Error-Correcting Code Memory)</h3>
+                    <p>
+                        <strong>Mit jelent?</strong> Hibajavító kóddal ellátott memóriamodul.<br>
+                        <strong>Működése:</strong> Képes automatikusan észlelni és javítani az egynapos bit-hibákat (single-bit errors), amelyeket például a kozmikus sugárzás vagy feszültségingadozás okoz. A több bites hibákat is észleli, megelőzve az adatintegritás sérülését.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-tag">[ FIZIKAI VÉDELEM ]</div>
+                    <h3>EMP (Electromagnetic Pulse — Elektromágneses Impulzus)</h3>
+                    <p>
+                        <strong>Mit jelent?</strong> Hirtelen fellépő, nagy energiájú elektromágneses sugárzás, amely képes tönkretenni a nem védett félvezetőket és integrált áramköröket.<br>
+                        <strong>Védekezés:</strong> Faraday-kalitka elvű fémhordozók, optikai leválasztás és szűrt tápvonalak alkalmazása a számítógépházban.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-tag">[ HARDVER / MEGBÍZHATÓSÁG ]</div>
+                    <h3>Bit-Flip (Single-Event Upset / SEU)</h3>
+                    <p>
+                        <strong>Mit jelent?</strong> A memória vagy a regiszter egyetlen bitjének akaratlan megváltozása (0-ból 1, vagy 1-ből 0 lesz) külső fizikai hatás, például ionizáló sugárzás hatására. A hatás kék halálhoz vagy hibás tüzelési adatokhoz vezetne védelmi mechanizmusok nélkül.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content" style="margin-bottom: 20px;">
+            <p>Miskolci Egyetem — Programtervező Informatikus BSc | Számítógép Architektúrák Beadandó</p>
+        </div>
+        <div class="sources-section" style="border-top: 1px dashed var(--border-color); padding-top: 15px; text-align: left; max-width: 800px; margin: 0 auto; font-size: 0.8rem;">
+            <p style="font-family: var(--font-mono); color: var(--accent-color); margin-bottom: 8px;">[ FORRÁSOK / REFERENCES ]</p>
+            <ul style="list-style-type: none; padding-left: 0; color: #8b9bb4;">
+                <li style="margin-bottom: 5px;">
+                    [1] Tanenbaum, Andrew S. – Austin, Todd: <em>Structured Computer Organization</em> (Pearson Education / Egyetemi tankönyv).
+                </li>
+                <li style="margin-bottom: 5px;">
+                    [2] NASA Office of Safety and Mission Assurance: <em>Fault-Tolerant Microprocessor / Lockstep Architecture Guidelines</em>.
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
